@@ -62,7 +62,7 @@ def main():
     print('Extracting Yahoo! fantasy football player auction values...')
     pagination = 0  # initialize at player 0
     while pagination <= 250:  # last page begins at player 250, extract top 300 player auction values
-        browser.get("https://football.fantasysports.yahoo.com/f1/" + args.yahoo_league_id + "/4/prerank_auction_costs"
+        browser.get("https://football.fantasysports.yahoo.com/f1/" + args.yahoo_league_id + "/3/prerank_auction_costs"
                     "?filter=ALL&sort=TAC&count=" + str(pagination))
 
         # selenium hands off the source of the specific job page to beautiful soup for parsing
