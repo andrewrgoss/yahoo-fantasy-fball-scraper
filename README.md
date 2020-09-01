@@ -1,0 +1,2 @@
+# fantasy-fball-aav-web-scraper
+Web scraping Yahoo fantasy football pre-draft average auction values using Selenium and BeautifulSoup. Values are extracted to CSV flat files for further usage and analysis.
