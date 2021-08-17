@@ -2,13 +2,12 @@
 __author__ = 'agoss'
 
 import argparse
-import time
-
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
+import time
 
 
 def init_config():
