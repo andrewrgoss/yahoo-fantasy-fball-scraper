@@ -3,6 +3,7 @@ __author__ = 'agoss'
 
 import argparse
 from bs4 import BeautifulSoup
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
@@ -50,7 +51,8 @@ def main():
     print('Program started\n**************START**************\n')
 
     # create output file headers
-    with open("yahoo_average_auction_values.csv", "a") as output_file:
+    csv_extract = datetime.now().strftime('%Y_%m_%d_') + "yahoo_average_auction_values.csv"
+    with open(csv_extract, "a") as output_file:
         output_file.write('PLAYER_NAME,TEAM,POSITION,LEAGUE_VALUE,PROJ_VALUE,AVG_COST,PREVIOUS_OWNER')
 
     # remotely control safari web browser
@@ -76,7 +78,7 @@ def main():
                 player_data = fantasy_data[3].split(' ')
 
                 print(" ".join(player_data[:-4]))
-                with open("yahoo_average_auction_values.csv", "a") as output_file:
+                with open(csv_extract, "a") as output_file:
                     output_file.write('\n' + " ".join(player_data[:-4]) + ',' + player_data[-4] + ','
                                       + player_data[-2] + ',' + fantasy_data[10] + ',' + fantasy_data[11] + ','
                                       + fantasy_data[12] + ',' + fantasy_data[13])
