@@ -2,7 +2,7 @@
 
 ## Extract Pre-Draft Auction Values for Analysis
 
-For fantasy football managers participating in auction-style drafts, [Yahoo Fantasy Football](https://football.fantasysports.yahoo.com) allows team managers to provide their own custom salary cap values prior to their league's draft. Users can set personal auction values for as many players as they'd like. Average, league, and projected auction values are also displayed based on league settings. While this is valuable data, this section of the Yahoo Fantasy Football platform does not allow managers to annotate and add their own notes for each player. 
+For fantasy football managers participating in auction-style drafts, [Yahoo Fantasy Football](https://football.fantasysports.yahoo.com) allows team managers to provide their own custom salary cap values prior to their league's draft. Users can set personal auction values for as many players as they'd like. Average, league, and projected auction values are also displayed based on league settings. While this is valuable data, this section of the Yahoo Fantasy Football platform does not allow managers to annotate their own notes for each player. 
 
 ![Yahoo Fantasy Football Pre-Draft Auction Costs](/_img/yahoo_pre_draft_auction_values.png)
 
@@ -20,7 +20,9 @@ Your Yahoo Fantasy Football league ID can be found in the URL from your league h
 
 ## Extract Historical League Auction Draft Results for Analysis
 
-Examining a specific fantasy football league's auction draft history over several years can give a barometer into how different managers approach player bidding. It can also highlight typical values for players going in a particular range (ex. average auction price for the 10th running back drafted).
+Examining a specific fantasy football league's auction draft history over several years can give a gauge into how different managers may approach player bidding. It can also highlight typical values for players going in a particular range (ex. average auction price for the 10th running back drafted).
+
+![Yahoo Fantasy Football Historical Draft Results](/_img/yahoo_historical_draft_results.png)
 
 I created this small script to scrape a player's historical league auction draft results for different supplied years using [Selenium](https://github.com/SeleniumHQ/selenium) and [Pandas](https://pandas.pydata.org). The historical fantasy football auction draft results for past leagues you've participated in - along with sortable player details including name, team, position, and your league's winning bid owner - get extracted to a CSV flat file, which I then convert to a spreadsheet for further annotation and analysis.
 
