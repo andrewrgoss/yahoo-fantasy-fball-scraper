@@ -1,0 +1,301 @@
+PLAYER_NAME,TEAM,POSITION,LEAGUE_VALUE,PROJ_VALUE,AVG_COST,PREVIOUS_OWNER
+Christian McCaffrey,Car,RB,$64 ,$64 ,$73.00 ,FA
+Dalvin Cook,Min,RB,$57 ,$57 ,$65.70 ,FA
+Ezekiel Elliott,Dal,RB,$55 ,$55 ,$59.30 ,FA
+Derrick Henry,Ten,RB,$55 ,$55 ,$68.20 ,FA
+Alvin Kamara,NO,RB,$55 ,$55 ,$62.70 ,FA
+Nick Chubb,Cle,RB,$54 ,$54 ,$57.40 ,FA
+Aaron Jones,GB,RB,$54 ,$54 ,$54.00 ,FA
+Saquon Barkley,NYG,RB,$53 ,$53 ,$58.40 ,FA
+Tyreek Hill,KC,WR,$52 ,$52 ,$56.20 ,FA
+Davante Adams,GB,WR,$52 ,$52 ,$52.70 ,FA
+Stefon Diggs,Buf,WR,$50 ,$50 ,$52.40 ,FA
+Travis Kelce,KC,TE,$48 ,$48 ,$51.80 ,FA
+Jonathan Taylor,Ind,RB,$48 ,$48 ,$56.00 ,FA
+Najee Harris,Pit,RB,$46 ,$46 ,$38.80 ,FA
+Austin Ekeler,LAC,RB,$46 ,$46 ,$46.40 ,FA
+Calvin Ridley,Atl,WR,$43 ,$43 ,$37.00 ,FA
+DeAndre Hopkins,Ari,WR,$43 ,$43 ,$42.60 ,FA
+Antonio Gibson,Was,RB,$43 ,$43 ,$42.90 ,FA
+Justin Jefferson,Min,WR,$40 ,$40 ,$36.70 ,FA
+A.J. Brown,Ten,WR,$38 ,$38 ,$37.00 ,FA
+Joe Mixon,Cin,RB,$36 ,$36 ,$38.50 ,FA
+Clyde Edwards-Helaire,KC,RB,$36 ,$36 ,$34.30 ,FA
+DK Metcalf,Sea,WR,$36 ,$36 ,$37.40 ,FA
+Darren Waller,LV,TE,$36 ,$36 ,$24.80 ,FA
+Allen Robinson II,Chi,WR,$36 ,$36 ,$25.70 ,FA
+Terry McLaurin,Was,WR,$36 ,$36 ,$26.60 ,FA
+Keenan Allen,LAC,WR,$36 ,$36 ,$25.40 ,FA
+CeeDee Lamb,Dal,WR,$36 ,$36 ,$17.80 ,FA
+David Montgomery,Chi,RB,$36 ,$36 ,$23.10 ,FA
+Chris Carson,Sea,RB,$35 ,$35 ,$22.60 ,FA
+Patrick Mahomes,KC,QB,$35 ,$35 ,$36.00 ,FA
+J.K. Dobbins,Bal,RB,$33 ,$33 ,$31.40 ,FA
+Chris Godwin,TB,WR,$33 ,$33 ,$17.30 ,FA
+Mike Evans,TB,WR,$30 ,$30 ,$19.40 ,FA
+George Kittle,SF,TE,$30 ,$30 ,$28.50 ,FA
+Darrell Henderson Jr.,LAR,RB,$29 ,$29 ,$16.80 ,FA
+Cooper Kupp,LAR,WR,$28 ,$28 ,$9.70 ,FA
+Robert Woods,LAR,WR,$27 ,$27 ,$12.00 ,FA
+Miles Sanders,Phi,RB,$25 ,$25 ,$24.30 ,FA
+Amari Cooper,Dal,WR,$24 ,$24 ,$14.40 ,FA
+D'Andre Swift,Det,RB,$24 ,$24 ,$22.40 ,FA
+Josh Allen,Buf,QB,$23 ,$23 ,$21.50 ,FA
+Lamar Jackson,Bal,QB,$23 ,$23 ,$13.30 ,FA
+DJ Moore,Car,WR,$23 ,$23 ,$9.40 ,FA
+Josh Jacobs,LV,RB,$23 ,$23 ,$16.00 ,FA
+Tyler Lockett,Sea,WR,$23 ,$23 ,$7.90 ,FA
+Julio Jones,Ten,WR,$23 ,$23 ,$14.50 ,FA
+T.J. Hockenson,Det,TE,$23 ,$23 ,$10.30 ,FA
+Brandon Aiyuk,SF,WR,$22 ,$22 ,$5.60 ,FA
+Travis Etienne,Jax,RB,$22 ,$22 ,$7.20 ,FA
+Adam Thielen,Min,WR,$22 ,$22 ,$9.30 ,FA
+Myles Gaskin,Mia,RB,$22 ,$22 ,$10.30 ,FA
+Kyle Pitts,Atl,TE,$22 ,$22 ,$10.40 ,FA
+Kareem Hunt,Cle,RB,$22 ,$22 ,$8.60 ,FA
+Dak Prescott,Dal,QB,$21 ,$21 ,$8.60 ,FA
+Mike Davis,Atl,RB,$18 ,$18 ,$7.30 ,FA
+Mark Andrews,Bal,TE,$18 ,$18 ,$9.60 ,FA
+Kyler Murray,Ari,QB,$18 ,$18 ,$12.10 ,FA
+Damien Harris,NE,RB,$18 ,$18 ,$4.70 ,FA
+Diontae Johnson,Pit,WR,$18 ,$18 ,$5.80 ,FA
+Tee Higgins,Cin,WR,$18 ,$18 ,$3.40 ,FA
+Ja'Marr Chase,Cin,WR,$16 ,$16 ,$3.50 ,FA
+Trey Sermon,SF,RB,$16 ,$16 ,$3.60 ,FA
+Robby Anderson,Car,WR,$16 ,$16 ,$2.60 ,FA
+Russell Wilson,Sea,QB,$16 ,$16 ,$6.90 ,FA
+Odell Beckham Jr.,Cle,WR,$14 ,$14 ,$4.80 ,FA
+Chase Edmonds,Ari,RB,$14 ,$14 ,$7.40 ,FA
+Kenny Golladay,NYG,WR,$14 ,$14 ,$5.40 ,FA
+Chase Claypool,Pit,WR,$14 ,$14 ,$3.50 ,FA
+Tyler Higbee,LAR,TE,$13 ,$13 ,$2.50 ,FA
+Javonte Williams,Den,RB,$13 ,$13 ,$4.20 ,FA
+Justin Herbert,LAC,QB,$13 ,$13 ,$5.70 ,FA
+James Robinson,Jax,RB,$12 ,$12 ,$4.60 ,FA
+Tom Brady,TB,QB,$12 ,$12 ,$3.80 ,FA
+David Johnson,Hou,RB,$12 ,$12 ,$2.10 ,FA
+Melvin Gordon III,Den,RB,$12 ,$12 ,$6.00 ,FA
+Leonard Fournette,TB,RB,$12 ,$12 ,$3.70 ,FA
+Raheem Mostert,SF,RB,$12 ,$12 ,$4.10 ,FA
+Ronald Jones II,TB,RB,$12 ,$12 ,$4.50 ,FA
+Robert Tonyan,GB,TE,$10 ,$10 ,$2.00 ,FA
+Jalen Hurts,Phi,QB,$10 ,$10 ,$3.20 ,FA
+Aaron Rodgers,GB,QB,$10 ,$10 ,$5.80 ,FA
+Logan Thomas,Was,TE,$9 ,$9 ,$1.90 ,FA
+Courtland Sutton,Den,WR,$9 ,$9 ,$1.90 ,FA
+JuJu Smith-Schuster,Pit,WR,$9 ,$9 ,$2.20 ,FA
+Michael Carter,NYJ,RB,$9 ,$9 ,$2.90 ,FA
+Jerry Jeudy,Den,WR,$8 ,$8 ,$2.20 ,FA
+Tyler Boyd,Cin,WR,$8 ,$8 ,$1.50 ,FA
+AJ Dillon,GB,RB,$8 ,$8 ,$1.80 ,FA
+Gus Edwards,Bal,RB,$8 ,$8 ,$1.30 ,FA
+Deebo Samuel,SF,WR,$8 ,$8 ,$2.90 ,FA
+James Conner,Ari,RB,$8 ,$8 ,$1.80 ,FA
+Zack Moss,Buf,RB,$7 ,$7 ,$2.30 ,FA
+Brandin Cooks,Hou,WR,$7 ,$7 ,$1.40 ,FA
+DJ Chark Jr.,Jax,WR,$7 ,$7 ,$1.90 ,FA
+Dallas Goedert,Phi,TE,$7 ,$7 ,$3.70 ,FA
+Ryan Tannehill,Ten,QB,$7 ,$7 ,$2.70 ,FA
+Antonio Brown,TB,WR,$7 ,$7 ,$2.10 ,FA
+Noah Fant,Den,TE,$7 ,$7 ,$2.80 ,FA
+Will Fuller V,Mia,WR,$7 ,$7 ,$1.50 ,FA
+Kenyan Drake,LV,RB,$7 ,$7 ,$1.60 ,FA
+Matthew Stafford,LAR,QB,$7 ,$7 ,$2.60 ,FA
+Jamaal Williams,Det,RB,$7 ,$7 ,$1.50 ,FA
+Michael Gallup,Dal,WR,$7 ,$7 ,$1.40 ,FA
+Curtis Samuel,Was,WR,$7 ,$7 ,$1.30 ,FA
+Laviska Shenault Jr.,Jax,WR,$7 ,$7 ,$1.60 ,FA
+Joe Burrow,Cin,QB,$6 ,$6 ,$1.70 ,FA
+Tony Pollard,Dal,RB,$6 ,$6 ,$1.20 ,FA
+Mike Williams,LAC,WR,$6 ,$6 ,$1.90 ,FA
+DeVonta Smith,Phi,WR,$6 ,$6 ,$1.60 ,FA
+Kirk Cousins,Min,QB,$6 ,$6 ,$1.30 ,FA
+Matt Ryan,Atl,QB,$6 ,$6 ,$1.30 ,FA
+Devin Singletary,Buf,RB,$6 ,$6 ,$1.30 ,FA
+Nyheim Hines,Ind,RB,$6 ,$6 ,$1.30 ,FA
+Jarvis Landry,Cle,WR,$6 ,$6 ,$1.40 ,FA
+Mike Gesicki,Mia,TE,$5 ,$5 ,$1.40 ,FA
+Latavius Murray,NO,RB,$5 ,$5 ,$1.40 ,FA
+Trevor Lawrence,Jax,QB,$5 ,$5 ,$1.50 ,FA
+Alexander Mattison,Min,RB,$5 ,$5 ,$1.40 ,FA
+Irv Smith Jr.,Min,TE,$5 ,$5 ,$1.40 ,FA
+Marvin Jones Jr.,Jax,WR,$4 ,$4 ,$1.40 ,FA
+Corey Davis,NYJ,WR,$4 ,$4 ,$1.70 ,FA
+Ryan Fitzpatrick,Was,QB,$4 ,$4 ,$1.10 ,FA
+Marquise Brown,Bal,WR,$4 ,$4 ,$1.20 ,FA
+Baker Mayfield,Cle,QB,$3 ,$3 ,$1.20 ,FA
+Adam Trautman,NO,TE,$3 ,$3 ,$1.20 ,FA
+Darnell Mooney,Chi,WR,$3 ,$3 ,$1.50 ,FA
+Hunter Henry,NE,TE,$3 ,$3 ,$1.20 ,FA
+Jonnu Smith,NE,TE,$3 ,$3 ,$1.10 ,FA
+Rashaad Penny,Sea,RB,$3 ,$3 ,$1.10 ,FA
+Deshaun Watson,Hou,QB,$3 ,$3 ,$1.80 ,FA
+Michael Thomas,NO,WR,$2 ,$2 ,$13.60 ,FA
+Evan Engram,NYG,TE,$2 ,$2 ,$1.00 ,FA
+Trey Lance,SF,QB,$2 ,$2 ,$1.30 ,FA
+J.D. McKissic,Was,RB,$2 ,$2 ,$1.10 ,FA
+Daniel Jones,NYG,QB,$2 ,$2 ,$1.00 ,FA
+Carson Wentz,Ind,QB,$2 ,$2 ,$1.10 ,FA
+Jeff Wilson Jr.,SF,RB,$2 ,$2 ,$-,FA
+Los Angeles,LAR,DEF,$1 ,$1 ,$3.00 ,FA
+Austin Hooper,Cle,TE,$1 ,$1 ,$1.00 ,FA
+Phillip Lindsay,Hou,RB,$1 ,$1 ,$1.30 ,FA
+Michael Pittman Jr.,Ind,WR,$1 ,$1 ,$1.30 ,FA
+DeVante Parker,Mia,WR,$1 ,$1 ,$1.30 ,FA
+Washington,Was,DEF,$1 ,$1 ,$1.90 ,FA
+Anthony Firkser,Ten,TE,$1 ,$1 ,$1.00 ,FA
+Cole Kmet,Chi,TE,$1 ,$1 ,$1.00 ,FA
+Pittsburgh,Pit,DEF,$1 ,$1 ,$1.70 ,FA
+James White,NE,RB,$1 ,$1 ,$1.10 ,FA
+Gerald Everett,Sea,TE,$1 ,$1 ,$1.10 ,FA
+Rashod Bateman,Bal,WR,$1 ,$1 ,$1.10 ,FA
+Elijah Moore,NYJ,WR,$1 ,$1 ,$1.30 ,FA
+Cole Beasley,Buf,WR,$1 ,$1 ,$1.70 ,FA
+Mecole Hardman,KC,WR,$1 ,$1 ,$1.50 ,FA
+Tarik Cohen,Chi,RB,$1 ,$1 ,$1.40 ,FA
+Ben Roethlisberger,Pit,QB,$1 ,$1 ,$1.10 ,FA
+Tua Tagovailoa,Mia,QB,$1 ,$1 ,$1.30 ,FA
+Jaylen Waddle,Mia,WR,$1 ,$1 ,$1.40 ,FA
+San Francisco,SF,DEF,$1 ,$1 ,$1.40 ,FA
+Rob Gronkowski,TB,TE,$1 ,$1 ,$1.60 ,FA
+Giovani Bernard,TB,RB,$1 ,$1 ,$-,FA
+Darrel Williams,KC,RB,$1 ,$1 ,$1.10 ,FA
+Baltimore,Bal,DEF,$1 ,$1 ,$1.60 ,FA
+Derek Carr,LV,QB,$1 ,$1 ,$1.10 ,FA
+Marlon Mack,Ind,RB,$1 ,$1 ,$1.10 ,FA
+Blake Jarwin,Dal,TE,$1 ,$1 ,$1.00 ,FA
+Tevin Coleman,NYJ,RB,$1 ,$1 ,$-,FA
+Henry Ruggs III,LV,WR,$1 ,$1 ,$1.20 ,FA
+Tampa Bay,TB,DEF,$1 ,$1 ,$2.90 ,FA
+Jalen Reagor,Phi,WR,$1 ,$1 ,$-,FA
+Sterling Shepard,NYG,WR,$1 ,$1 ,$-,FA
+Nelson Agholor,NE,WR,$1 ,$1 ,$1.10 ,FA
+Jared Cook,LAC,TE,$1 ,$1 ,$1.20 ,FA
+Jamison Crowder,NYJ,WR,$1 ,$1 ,$1.30 ,FA
+Taysom Hill,NO,QB,$1 ,$1 ,$1.40 ,FA
+T.Y. Hilton,Ind,WR,$1 ,$1 ,$1.30 ,FA
+John Brown,LV,WR,$1 ,$1 ,$-,FA
+Carlos Hyde,Jax,RB,$1 ,$1 ,$-,FA
+Sam Darnold,Car,QB,$1 ,$1 ,$1.20 ,FA
+Sony Michel,NE,RB,$1 ,$1 ,$1.00 ,FA
+Christian Kirk,Ari,WR,$1 ,$1 ,$-,FA
+Kansas City,KC,DEF,$1 ,$1 ,$1.10 ,FA
+Emmanuel Sanders,Buf,WR,$1 ,$1 ,$1.10 ,FA
+Breshad Perriman,Det,WR,$1 ,$1 ,$-,FA
+Darius Slayton,NYG,WR,$1 ,$1 ,$-,FA
+Zach Ertz,Phi,TE,$1 ,$1 ,$1.20 ,FA
+Benny Snell Jr.,Pit,RB,$1 ,$1 ,$-,FA
+Mark Ingram II,Hou,RB,$1 ,$1 ,$1.10 ,FA
+Buffalo,Buf,DEF,$1 ,$1 ,$1.20 ,FA
+Eric Ebron,Pit,TE,$1 ,$1 ,$1.10 ,FA
+Ke'Shawn Vaughn,TB,RB,$1 ,$1 ,$-,FA
+Jared Goff,Det,QB,$1 ,$1 ,$1.30 ,FA
+Indianapolis,Ind,DEF,$1 ,$1 ,$1.10 ,FA
+Salvon Ahmed,Mia,RB,$1 ,$1 ,$-,FA
+New Orleans,NO,DEF,$1 ,$1 ,$1.00 ,FA
+Boston Scott,Phi,RB,$1 ,$1 ,$-,FA
+Todd Gurley II,Atl,RB,$1 ,$1 ,$1.10 ,FA
+Cam Newton,NE,QB,$1 ,$1 ,$1.40 ,FA
+Gabriel Davis,Buf,WR,$1 ,$1 ,$-,FA
+Denzel Mims,NYJ,WR,$1 ,$1 ,$-,FA
+Parris Campbell,Ind,WR,$1 ,$1 ,$-,FA
+Hayden Hurst,Atl,TE,$1 ,$1 ,$1.00 ,FA
+Jameis Winston,NO,QB,$1 ,$1 ,$1.30 ,FA
+Allen Lazard,GB,WR,$1 ,$1 ,$-,FA
+Le'Veon Bell,KC,RB,$1 ,$1 ,$-,FA
+Mike Boone,Den,RB,$1 ,$1 ,$-,FA
+Justin Fields,Chi,QB,$0 ,$0 ,$1.10 ,FA
+Jakobi Meyers,NE,WR,$0 ,$0 ,$-,FA
+Tre'Quan Smith,NO,WR,$0 ,$0 ,$-,FA
+Russell Gage,Atl,WR,$0 ,$0 ,$1.00 ,FA
+Malcolm Brown,Mia,RB,$0 ,$0 ,$-,FA
+Darrynton Evans,Ten,RB,$0 ,$0 ,$-,FA
+Joshua Kelley,LAC,RB,$0 ,$0 ,$-,FA
+Bryan Edwards,LV,WR,$0 ,$0 ,$-,FA
+Chuba Hubbard,Car,RB,$0 ,$0 ,$1.20 ,FA
+Devontae Booker,NYG,RB,$0 ,$0 ,$-,FA
+Denver,Den,DEF,$0 ,$0 ,$1.00 ,FA
+Cleveland,Cle,DEF,$0 ,$0 ,$1.20 ,FA
+Dawson Knox,Buf,TE,$0 ,$0 ,$-,FA
+Samaje Perine,Cin,RB,$0 ,$0 ,$-,FA
+New England,NE,DEF,$0 ,$0 ,$1.10 ,FA
+Los Angeles,LAC,DEF,$0 ,$0 ,$1.00 ,FA
+Tyrell Williams,Det,WR,$0 ,$0 ,$-,FA
+Miami,Mia,DEF,$0 ,$0 ,$1.00 ,FA
+Rondale Moore,Ari,WR,$0 ,$0 ,$-,FA
+Zach Wilson,NYJ,QB,$0 ,$0 ,$1.20 ,FA
+Qadree Ollison,Atl,RB,$0 ,$0 ,$-,FA
+Nico Collins,Hou,WR,$0 ,$0 ,$-,FA
+Marquez Callaway,NO,WR,$0 ,$0 ,$-,FA
+Rhamondre Stevenson,NE,RB,$0 ,$0 ,$-,FA
+Jerick McKinnon,KC,RB,$0 ,$0 ,$-,FA
+Josh Reynolds,Ten,WR,$0 ,$0 ,$-,FA
+Tim Patrick,Den,WR,$0 ,$0 ,$-,FA
+Amon-Ra St. Brown,Det,WR,$0 ,$0 ,$-,FA
+Sammy Watkins,Bal,WR,$0 ,$0 ,$1.00 ,FA
+Kenneth Gainwell,Phi,RB,$0 ,$0 ,$-,FA
+DeSean Jackson,LAR,WR,$0 ,$0 ,$-,FA
+Anthony McFarland Jr.,Pit,RB,$0 ,$0 ,$-,FA
+Van Jefferson Jr.,LAR,WR,$0 ,$0 ,$-,FA
+Minnesota,Min,DEF,$0 ,$0 ,$1.00 ,FA
+Tyron Johnson,LAC,WR,$0 ,$0 ,$-,FA
+Terrace Marshall Jr.,Car,WR,$0 ,$0 ,$-,FA
+Chicago,Chi,DEF,$0 ,$0 ,$1.00 ,FA
+Preston Williams,Mia,WR,$0 ,$0 ,$-,FA
+A.J. Green,Ari,WR,$0 ,$0 ,$1.70 ,FA
+Randall Cobb,GB,WR,$0 ,$0 ,$1.20 ,FA
+Keelan Cole Sr.,NYJ,WR,$0 ,$0 ,$-,FA
+Philadelphia,Phi,DEF,$0 ,$0 ,$1.00 ,FA
+Rashard Higgins,Cle,WR,$0 ,$0 ,$-,FA
+Marquez Valdes-Scantling,GB,WR,$0 ,$0 ,$-,FA
+Amari Rodgers,GB,WR,$0 ,$0 ,$-,FA
+Tyrod Taylor,Hou,QB,$0 ,$0 ,$-,FA
+Green Bay,GB,DEF,$0 ,$0 ,$1.00 ,FA
+James Washington,Pit,WR,$0 ,$0 ,$-,FA
+New York,NYG,DEF,$0 ,$0 ,$1.00 ,FA
+Hunter Renfrow,LV,WR,$0 ,$0 ,$-,FA
+Dan Arnold,Car,TE,$0 ,$0 ,$-,FA
+Seattle,Sea,DEF,$0 ,$0 ,$1.00 ,FA
+Anthony Miller,Hou,WR,$0 ,$0 ,$-,FA
+Kadarius Toney,NYG,WR,$0 ,$0 ,$-,FA
+Wayne Gallman Jr.,SF,RB,$0 ,$0 ,$-,FA
+Chris Herndon,NYJ,TE,$0 ,$0 ,$-,FA
+Donald Parham Jr.,LAC,TE,$0 ,$0 ,$-,FA
+Justin Jackson,LAC,RB,$0 ,$0 ,$-,FA
+Matt Breida,Buf,RB,$0 ,$0 ,$-,FA
+Teddy Bridgewater,Den,QB,$0 ,$0 ,$-,FA
+Mo Alie-Cox,Ind,TE,$0 ,$0 ,$-,FA
+Kerryon Johnson,Phi,RB,$0 ,$0 ,$-,FA
+La'Mical Perine,NYJ,RB,$0 ,$0 ,$-,FA
+Tylan Wallace,Bal,WR,$0 ,$0 ,$-,FA
+Xavier Jones,LAR,RB,$0 ,$0 ,$-,FA
+Tennessee,Ten,DEF,$0 ,$0 ,$1.00 ,FA
+Jake Funk,LAR,RB,$0 ,$0 ,$-,FA
+KJ Hamler,Den,WR,$0 ,$0 ,$-,FA
+Duke Johnson,Hou,RB,$0 ,$0 ,$-,FA
+Ty Johnson,NYJ,RB,$0 ,$0 ,$-,FA
+O.J. Howard,TB,TE,$0 ,$0 ,$-,FA
+Dalton Schultz,Dal,TE,$0 ,$0 ,$-,FA
+New York,NYJ,DEF,$0 ,$0 ,$-,FA
+Ito Smith,Ari,RB,$0 ,$0 ,$-,FA
+Arizona,Ari,DEF,$0 ,$0 ,$1.50 ,FA
+Jimmy Graham,Chi,TE,$0 ,$0 ,$-,FA
+Keke Coutee,Hou,WR,$0 ,$0 ,$-,FA
+Jacksonville,Jax,DEF,$0 ,$0 ,$-,FA
+Jimmy Garoppolo,SF,QB,$0 ,$0 ,$-,FA
+Jack Doyle,Ind,TE,$0 ,$0 ,$-,FA
+Rex Burkhead,Hou,RB,$0 ,$0 ,$-,FA
+Zach Pascal,Ind,WR,$0 ,$0 ,$-,FA
+Andy Dalton,Chi,QB,$0 ,$0 ,$-,FA
+N'Keal Harry,NE,WR,$0 ,$0 ,$-,FA
+Drew Lock,Den,QB,$0 ,$0 ,$-,FA
+Tyler Eifert,Jax,TE,$0 ,$0 ,$-,FA
+Golden Tate,NYG,WR,$0 ,$0 ,$-,FA
+Scotty Miller,TB,WR,$0 ,$0 ,$-,FA
+Kyle Rudolph,NYG,TE,$0 ,$0 ,$-,FA
+Travis Fulgham,Phi,WR,$0 ,$0 ,$-,FA
+Andy Isabella,Ari,WR,$0 ,$0 ,$-,FA
+Quintez Cephus,Det,WR,$0 ,$0 ,$-,FA
+DeeJay Dallas,Sea,RB,$0 ,$0 ,$-,FA
+Donovan Peoples-Jones,Cle,WR,$0 ,$0 ,$-,FA
+Bryce Love,Was,RB,$0 ,$0 ,$-,FA
