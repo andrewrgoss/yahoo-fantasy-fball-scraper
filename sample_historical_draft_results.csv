@@ -1,0 +1,181 @@
+Year,Pick,Player,Team,Position,Salary,Owner
+2021,4,Christian McCaffrey,Car,RB,$67 ,Owner1
+2021,10,Dalvin Cook,Min,RB,$63 ,Owner2
+2021,33,Alvin Kamara,NO,RB,$59 ,Owner3
+2021,16,Ezekiel Elliott,Dal,RB,$58 ,Owner4
+2021,22,Derrick Henry,Ten,RB,$56 ,Owner5
+2021,3,Aaron Jones,GB,RB,$55 ,Owner6
+2021,23,Davante Adams,LV,WR,$52 ,Owner7
+2021,37,Nick Chubb,Cle,RB,$49 ,Owner8
+2021,27,Tyreek Hill,Mia,WR,$49 ,Owner9
+2021,11,Saquon Barkley,NYG,RB,$48 ,Owner10
+2021,38,Austin Ekeler,LAC,RB,$47 ,Owner11
+2021,6,DeAndre Hopkins,Ari,WR,$47 ,Owner2
+2021,28,Calvin Ridley,Atl,WR,$45 ,Owner10
+2021,8,Joe Mixon,Cin,RB,$41 ,Owner4
+2021,34,Najee Harris,Pit,RB,$40 ,Owner7
+2021,52,A.J. Brown,Phi,WR,$39 ,Owner12
+2021,25,Travis Kelce,KC,TE,$39 ,Owner10
+2021,49,Terry McLaurin,Was,WR,$37 ,Owner6
+2021,30,Clyde Edwards-Helaire,KC,RB,$37 ,Owner7
+2021,5,Patrick Mahomes,KC,QB,$35 ,Owner5
+2021,40,Darren Waller,LV,TE,$33 ,Owner1
+2021,51,J.K. Dobbins,Bal,RB,$33 ,Owner1
+2021,41,CeeDee Lamb,Dal,WR,$33 ,Owner9
+2021,177,Jonathan Taylor,Ind,RB,$31 ,Owner3
+2021,9,Robert Woods,Ten,WR,$31 ,Owner8
+2021,42,Cooper Kupp,LAR,WR,$31 ,Owner6
+2021,54,Chris Godwin,TB,WR,$30 ,Owner5
+2021,15,George Kittle,SF,TE,$30 ,Owner8
+2021,26,Chris Carson,Sea,RB,$28 ,Owner9
+2021,39,Darrell Henderson Jr.,LAR,RB,$28 ,Owner7
+2021,53,Mike Evans,TB,WR,$27 ,Owner9
+2021,20,Amari Cooper,Cle,WR,$26 ,Owner2
+2021,176,Stefon Diggs,Buf,WR,$26 ,Owner4
+2021,65,DJ Moore,Car,WR,$25 ,Owner3
+2021,173,DK Metcalf,Sea,WR,$25 ,Owner7
+2021,17,James Robinson,Jax,RB,$24 ,Owner6
+2021,35,David Montgomery,Chi,RB,$24 ,Owner3
+2021,29,Allen Robinson II,LAR,WR,$24 ,Owner11
+2021,59,Adam Thielen,Min,WR,$23 ,Owner12
+2021,18,Julio Jones,TB,WR,$22 ,Owner12
+2021,31,Josh Jacobs,LV,RB,$20 ,Owner8
+2021,24,Lamar Jackson,Bal,QB,$20 ,Owner2
+2021,171,Keenan Allen,LAC,WR,$19 ,Owner12
+2021,71,Mike Davis,Bal,RB,$19 ,Owner11
+2021,47,Tyler Lockett,Sea,WR,$17 ,Owner11
+2021,58,Miles Sanders,Phi,RB,$17 ,Owner11
+2021,21,Kyler Murray,Ari,QB,$17 ,Owner4
+2021,87,Jerry Jeudy,Den,WR,$17 ,Owner3
+2021,68,Damien Harris,NE,RB,$16 ,Owner8
+2021,66,Odell Beckham Jr.,LAR,WR,$16 ,Owner5
+2021,63,Kyle Pitts,Atl,TE,$16 ,Owner9
+2021,97,Javonte Williams,Den,RB,$16 ,Owner11
+2021,44,Mark Andrews,Bal,TE,$16 ,Owner5
+2021,64,T.J. Hockenson,Det,TE,$15 ,Owner12
+2021,56,Robbie Anderson,Car,WR,$15 ,Owner4
+2021,102,Trey Sermon,SF,RB,$15 ,Owner12
+2021,78,Dak Prescott,Dal,QB,$14 ,Owner12
+2021,76,Diontae Johnson,Pit,WR,$14 ,Owner11
+2021,174,D'Andre Swift,Det,RB,$14 ,Owner2
+2021,7,JuJu Smith-Schuster,KC,WR,$14 ,Owner8
+2021,75,Myles Gaskin,Mia,RB,$14 ,Owner10
+2021,72,Noah Fant,Sea,TE,$14 ,Owner4
+2021,61,Ja'Marr Chase,Cin,WR,$13 ,Owner6
+2021,32,Kareem Hunt,Cle,RB,$13 ,Owner3
+2021,99,Raheem Mostert,Mia,RB,$12 ,Owner12
+2021,57,Chase Edmonds,Mia,RB,$12 ,Owner9
+2021,107,DeVonta Smith,Phi,WR,$11 ,Owner1
+2021,73,Logan Thomas,Was,TE,$11 ,Owner11
+2021,83,Chase Claypool,Pit,WR,$11 ,Owner5
+2021,80,Antonio Brown,TB,WR,$11 ,Owner10
+2021,45,Justin Herbert,LAC,QB,$11 ,Owner6
+2021,14,Kenny Golladay,NYG,WR,$11 ,Owner12
+2021,175,Justin Jefferson,Min,WR,$10 ,Owner1
+2021,172,Josh Allen,Buf,QB,$10 ,Owner10
+2021,43,James Conner,Ari,RB,$10 ,Owner8
+2021,82,Jalen Hurts,Phi,QB,$10 ,Owner1
+2021,67,T.Y. Hilton,Ind,WR,$10 ,Owner8
+2021,178,Antonio Gibson,Was,RB,$10 ,Owner5
+2021,180,Tee Higgins,Cin,WR,$10 ,Owner9
+2021,96,Courtland Sutton,Den,WR,$10 ,Owner12
+2021,179,Brandon Aiyuk,SF,WR,$10 ,Owner11
+2021,84,Tyler Higbee,LAR,TE,$9 ,Owner3
+2021,60,Russell Wilson,Den,QB,$9 ,Owner11
+2021,48,Aaron Rodgers,GB,QB,$9 ,Owner9
+2021,111,Laviska Shenault Jr.,Jax,WR,$9 ,Owner10
+2021,46,Jonnu Smith,NE,TE,$8 ,Owner2
+2021,74,Jarvis Landry,NO,WR,$8 ,Owner2
+2021,85,Sony Michel,Mia,RB,$8 ,Owner12
+2021,2,Dallas Goedert,Phi,TE,$8 ,Owner8
+2021,100,Michael Gallup,Dal,WR,$8 ,Owner12
+2021,1,AJ Dillon,GB,RB,$8 ,Owner4
+2021,109,Corey Davis,NYJ,WR,$8 ,Owner1
+2021,55,Leonard Fournette,TB,RB,$7 ,Owner10
+2021,81,Mike Williams,LAC,WR,$7 ,Owner11
+2021,77,Robert Tonyan,GB,TE,$7 ,Owner6
+2021,129,Michael Thomas,NO,WR,$6 ,Owner1
+2021,69,Ronald Jones II,KC,RB,$6 ,Owner6
+2021,79,Matthew Stafford,LAR,QB,$6 ,Owner8
+2021,88,Tyler Boyd,Cin,WR,$6 ,Owner11
+2021,36,Tom Brady,TB,QB,$6 ,Owner5
+2021,104,Melvin Gordon III,Den,RB,$6 ,Owner10
+2021,128,David Johnson,Hou,RB,$6 ,Owner7
+2021,13,Tony Pollard,Dal,RB,$6 ,Owner4
+2021,90,Deebo Samuel,SF,WR,$5 ,Owner5
+2021,89,Brandin Cooks,Hou,WR,$5 ,Owner10
+2021,124,Curtis Samuel,Was,WR,$5 ,Owner3
+2021,118,Michael Carter,NYJ,RB,$5 ,Owner1
+2021,126,Ryan Tannehill,Ten,QB,$5 ,Owner4
+2021,112,DJ Chark Jr.,Det,WR,$5 ,Owner1
+2021,122,Mecole Hardman,KC,WR,$4 ,Owner3
+2021,117,Phillip Lindsay,Ind,RB,$4 ,Owner1
+2021,95,Joe Burrow,Cin,QB,$4 ,Owner7
+2021,50,Devin Singletary,Buf,RB,$4 ,Owner3
+2021,130,Jameis Winston,NO,QB,$4 ,Owner1
+2021,86,Emmanuel Sanders,Buf,WR,$4 ,Owner2
+2021,70,Rob Gronkowski,TB,TE,$4 ,Owner6
+2021,123,Marvin Jones Jr.,Jax,WR,$4 ,Owner9
+2021,134,Jaylen Waddle,Mia,WR,$4 ,Owner6
+2021,141,Rondale Moore,Ari,WR,$3 ,Owner3
+2021,115,Jakobi Meyers,NE,WR,$3 ,Owner5
+2021,125,Marquise Brown,Ari,WR,$3 ,Owner5
+2021,140,Jamison Crowder,Buf,WR,$3 ,Owner6
+2021,138,Darnell Mooney,Chi,WR,$3 ,Owner4
+2021,19,San Francisco,SF,DEF,$3 ,Owner2
+2021,108,Zack Moss,Buf,RB,$3 ,Owner9
+2021,101,Will Fuller V,Mia,WR,$3 ,Owner5
+2021,91,New England,NE,DEF,$2 ,Owner12
+2021,147,Hunter Henry,NE,TE,$2 ,Owner8
+2021,12,Tampa Bay,TB,DEF,$2 ,Owner5
+2021,132,Irv Smith Jr.,Min,TE,$2 ,Owner4
+2021,142,Mike Gesicki,Mia,TE,$2 ,Owner9
+2021,92,Cole Beasley,Buf,WR,$2 ,Owner1
+2021,137,Matt Ryan,Ind,QB,$2 ,Owner9
+2021,114,Kenyan Drake,LV,RB,$2 ,Owner9
+2021,133,Sterling Shepard,NYG,WR,$2 ,Owner4
+2021,93,Nelson Agholor,NE,WR,$2 ,Owner5
+2021,145,Michael Pittman Jr.,Ind,WR,$2 ,Owner10
+2021,116,Jamaal Williams,Det,RB,$2 ,Owner3
+2021,131,Trey Lance,SF,QB,$2 ,Owner3
+2021,62,Austin Hooper,Ten,TE,$2 ,Owner2
+2021,127,Randall Cobb,GB,WR,$2 ,Owner6
+2021,155,Gerald Everett,LAC,TE,$1 ,Owner4
+2021,98,Giovani Bernard,TB,RB,$1 ,Owner7
+2021,158,Mark Ingram II,NO,RB,$1 ,Owner8
+2021,165,Baker Mayfield,Car,QB,$1 ,Owner8
+2021,153,Anthony Firkser,Atl,TE,$1 ,Owner7
+2021,143,Terrace Marshall Jr.,Car,WR,$1 ,Owner7
+2021,152,Evan Engram,Jax,TE,$1 ,Owner11
+2021,110,Adam Trautman,NO,TE,$1 ,Owner7
+2021,94,Gus Edwards,Bal,RB,$1 ,Owner1
+2021,161,James White,NE,RB,$1 ,Owner11
+2021,121,Washington,Was,DEF,$1 ,Owner11
+2021,106,Buffalo,Buf,DEF,$1 ,Owner1
+2021,168,Russell Gage,TB,WR,$1 ,Owner2
+2021,166,Rashaad Penny,Sea,RB,$1 ,Owner2
+2021,159,Cole Kmet,Chi,TE,$1 ,Owner2
+2021,149,Trevor Lawrence,Jax,QB,$1 ,Owner2
+2021,157,Latavius Murray,Bal,RB,$1 ,Owner12
+2021,164,Ryan Fitzpatrick,Was,QB,$1 ,Owner12
+2021,148,DeVante Parker,NE,WR,$1 ,Owner8
+2021,162,Jalen Reagor,Phi,WR,$1 ,Owner7
+2021,103,Baltimore,Bal,DEF,$1 ,Owner8
+2021,146,Zach Ertz,Ari,TE,$1 ,Owner10
+2021,151,Indianapolis,Ind,DEF,$1 ,Owner3
+2021,135,Pittsburgh,Pit,DEF,$1 ,Owner4
+2021,120,Nyheim Hines,Ind,RB,$1 ,Owner5
+2021,150,Marquez Callaway,NO,WR,$1 ,Owner6
+2021,113,Deshaun Watson,Cle,QB,$1 ,Owner10
+2021,136,Elijah Moore,NYJ,WR,$1 ,Owner10
+2021,139,Alexander Mattison,Min,RB,$1 ,Owner2
+2021,156,Denver,Den,DEF,$1 ,Owner10
+2021,144,J.D. McKissic,Was,RB,$1 ,Owner9
+2021,160,Darrel Williams,Ari,RB,$1 ,Owner6
+2021,105,Los Angeles,LAR,DEF,$1 ,Owner6
+2021,154,Henry Ruggs III,LV,WR,$1 ,Owner9
+2021,170,Parris Campbell,Ind,WR,$1 ,Owner7
+2021,169,Justin Fields,Chi,QB,$1 ,Owner7
+2021,167,Gabriel Davis,Buf,WR,$1 ,Owner7
+2021,163,Rhamondre Stevenson,NE,RB,$1 ,Owner4
+2021,119,Kirk Cousins,Min,QB,$1 ,Owner3
