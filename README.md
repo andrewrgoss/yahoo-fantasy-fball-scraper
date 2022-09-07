@@ -33,3 +33,15 @@ This app is designed to be used with a Mac computer that remotely controls your 
 Download this repository and run the following command:
 
 `/<<your_local_download_location>>/yahoo-fantasy-fball-auction-value-scraper/predraft_auction_values.py --yahoo_email <<your_yahoo_email>> --yahoo_pw <<your_yahoo_password>> --yahoo_league_name <<your_yahoo_fantasy_football_league_name>> --yahoo_league_year <<historical_year_to_lookup_your_league_draft_results>>`
+
+## Extract Current League Auction Draft Results for Analysis
+
+I created this small script to scrape a player's current league auction draft results using [Selenium](https://github.com/SeleniumHQ/selenium) and [Pandas](https://pandas.pydata.org). The fantasy football auction draft results for your current league that you're participating in - along with sortable player details including name, team, position, and your league's winning bid owner - get extracted to a CSV flat file, which I then convert to a spreadsheet for further annotation and analysis.
+
+### Usage
+
+This app is designed to be used with a Mac computer that remotely controls your [Safari](https://www.apple.com/safari/) web browser. It's not designed to work with Yahoo 2-step verification (2sv) and this should be disabled, at least temporarily.
+
+Download this repository and run the following command:
+
+`/<<your_local_download_location>>/yahoo-fantasy-fball-auction-value-scraper/current_draft_results.py --yahoo_email <<your_yahoo_email>> --yahoo_pw <<your_yahoo_password>> --yahoo_league_id <<your_yahoo_fantasy_football_league_id>>`
