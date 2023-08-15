@@ -32,7 +32,7 @@ def get_arg_list():
 
 def yahoo_account_login(user_email, user_pw, browser):
     """
-    Login to yahoo account to access fantasy football player projections based on league settings.
+    Login to Yahoo account to access fantasy football player projections based on league settings.
     """
 
     browser.get('https://login.yahoo.com')
@@ -47,6 +47,15 @@ def yahoo_account_login(user_email, user_pw, browser):
     submit_btn = browser.find_element_by_id('login-signin')
     submit_btn.click()
     return browser
+
+
+def write_player_record_to_csv(csv_extract, player_details, player_status, player_projections):
+    csv_contents = '\n' + ' '.join(player_details[:-3]) \
+                   + '{0}' + player_details[-3] + '{0}' + player_details[-1] + '{0}' + player_status + '{0}'
+    for player_projection in player_projections:
+        csv_contents = csv_contents + player_projection + '{0}'
+    with open(csv_extract, 'a') as output_file:
+        output_file.write(csv_contents.format(',')[:-1])
 
 
 def main():
@@ -86,7 +95,7 @@ def main():
 
         # Parse records and write to output file
         for table_row in table_rows:
-            if i == 0:  # Capture player name, team, and position from first record
+            if i == 2:  # Capture player name, team, and position from record
                 player_details = table_row.split(' ')
                 print(' '.join(player_details[:-3]))
                 i += 1
@@ -94,18 +103,16 @@ def main():
             elif table_row.lower() in ('ir', 'nfi-r', 'nfi-a', 'o', 'pup', 'pup-p', 'd', 'na', 'p', 'q', 'susp'):
                 player_status = table_row
                 continue
-            elif i in (1, 2, 3, 23):  # Skip specific unused records using iterator
+            # Skip video forecasts that only exist for certain players
+            elif 'forecast' in table_row.lower():
+                continue
+            elif i in (0, 1, 3, 4, 5, 25):  # Skip specific unused record using iterator
                 i += 1
                 pass
             elif 'note' in table_row.lower():  # Write current player projections and advance to next player
-                i = 0
-                csv_contents = '\n' + ' '.join(player_details[:-3]) \
-                               + '{0}' + player_details[-3] + '{0}' + player_details[-1] + '{0}' + player_status + '{0}'
-                for player_projection in player_projections:
-                    csv_contents = csv_contents + player_projection + '{0}'
-                with open(csv_extract, 'a') as output_file:
-                    output_file.write(csv_contents.format(',')[:-1])
+                write_player_record_to_csv(csv_extract, player_details, player_status, player_projections)
                 # Reset variables
+                i = 2
                 player_projections = []
                 player_status = 'A'
                 continue
@@ -114,6 +121,7 @@ def main():
                 i += 1
                 continue
 
+        write_player_record_to_csv(csv_extract, player_details, player_status, player_projections)  # Write final page record
         pagination += 25  # Paginate to the next 25 players
 
     end = time.time()
