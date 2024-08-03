@@ -2,13 +2,13 @@
 __author__ = 'agoss'
 
 import argparse
-from bs4 import BeautifulSoup
 from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.ui import WebDriverWait
 import time
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+import helper
 
 
 def init_config():
@@ -27,46 +27,28 @@ def get_arg_list():
     return parser.parse_args()
 
 
-def yahoo_account_login(user_email, user_pw, browser):
-    """
-    Login to yahoo account to access fantasy football league data.
-    """
-
-    browser.get('https://login.yahoo.com')
-    email_elem = browser.find_element_by_id('login-username')
-    email_elem.send_keys(user_email)
-    login_btn = browser.find_element_by_id("login-signin")
-    login_btn.click()
-    pw_elem = WebDriverWait(browser, 10).until(
-        expected_conditions.presence_of_element_located((By.ID, "login-passwd"))
-    )
-    pw_elem.send_keys(user_pw)
-    submit_btn = browser.find_element_by_id("login-signin")
-    submit_btn.click()
-    return browser
-
-
 def main():
     start, args = init_config()
     print('Program started\n**************START**************\n')
 
-    # create output file headers
-    csv_extract = datetime.now().strftime('%Y_%m_%d_') + "yahoo_predraft_auction_values.csv"
-    with open(csv_extract, "a") as output_file:
+    # Create output file headers
+    csv_extract = datetime.now().strftime('%Y_%m_%d_') + 'yahoo_predraft_auction_values.csv'
+    with open(csv_extract, 'a', encoding='utf-8') as output_file:
         output_file.write('PLAYER_NAME,TEAM,POSITION,LEAGUE_VALUE,PROJ_VALUE,AVG_COST,PREVIOUS_OWNER')
 
-    # remotely control safari web browser
+    # Remotely control Safari web browser
     browser = webdriver.Safari()
-    browser = yahoo_account_login(args.yahoo_email, args.yahoo_pw, browser)
+    browser = helper.yahoo_account_login(args.yahoo_email, args.yahoo_pw, browser)
 
-    #  cycle through player data and extract fantasy football league pre-draft auction values
+    #  Cycle through player data and extract fantasy football league pre-draft auction values
     print('Extracting Yahoo! fantasy football player auction values...')
-    pagination = 0  # initialize at player 0
-    while pagination <= 250:  # last page begins at player 250, extract top 300 player auction values
-        browser.get("https://football.fantasysports.yahoo.com/f1/" + args.yahoo_league_id + "/3/prerank_auction_costs"
-                    "?filter=ALL&sort=TAC&count=" + str(pagination))
+    pagination = 0  # Initialize at player 0
+    while pagination <= 250:  # Last page begins at player 250, extract top 300 player auction values
+        time.sleep(5)  # Delay by 5 seconds
+        browser.get(f'https://football.fantasysports.yahoo.com/f1/{args.yahoo_league_id}/3/prerank_auction_costs?'
+                    f'filter=ALL&sort=TAC&count={str(pagination)}')
 
-        # selenium hands off the source of the specific job page to beautiful soup for parsing
+        # Selenium hands off the source of the specific job page to Beautiful Soup for parsing
         soup = BeautifulSoup(browser.page_source, 'html.parser')
         table = soup.find('table', id='ysf-preauctioncosts-dt')
 
@@ -74,15 +56,17 @@ def main():
             if row.attrs['class'][0] == 'headerRow1':
                 pass
             else:
-                fantasy_data = row.text.splitlines()
-                player_data = fantasy_data[3].split(' ')
 
-                print(" ".join(player_data[:-4]))
-                with open(csv_extract, "a") as output_file:
-                    output_file.write('\n' + " ".join(player_data[:-4]) + ',' + player_data[-4] + ','
-                                      + player_data[-2] + ',' + fantasy_data[10] + ',' + fantasy_data[11] + ','
-                                      + fantasy_data[12] + ',' + fantasy_data[13])
-        pagination += 50  # paginate to the next 50 players
+                fantasy_data = row.text.splitlines()
+                player_name = row.contents[2].contents[1].contents[1].contents[1].contents[0].text
+                team_pos = row.contents[2].contents[1].contents[1].contents[1].contents[1].text
+                team_pos = team_pos.split(' ')
+
+                print(player_name)
+                with open(csv_extract, 'a', encoding='utf-8') as output_file:
+                    output_file.write(f'\n{player_name},{team_pos[0]},{team_pos[2]},'
+                                      f'{fantasy_data[10]},{fantasy_data[11]},{fantasy_data[12]},{fantasy_data[13]}')
+        pagination += 50  # Paginate to the next 50 players
 
     end = time.time()
     print('Program finished\n\n**************DONE**************\n' + 'Time elapsed: ' + str(end - start) + '\n')

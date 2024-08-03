@@ -2,14 +2,13 @@
 __author__ = 'agoss'
 
 import argparse
-from bs4 import BeautifulSoup
 from datetime import datetime
-import pandas as pd
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.ui import WebDriverWait
-import time
+
+import helper
 
 
 def init_config():
@@ -30,31 +29,11 @@ def get_arg_list():
     return parser.parse_args()
 
 
-def yahoo_account_login(user_email, user_pw, browser):
-    """
-    Login to Yahoo account to access fantasy football player projections based on league settings.
-    """
-
-    browser.get('https://login.yahoo.com')
-    email_elem = browser.find_element_by_id('login-username')
-    email_elem.send_keys(user_email)
-    login_btn = browser.find_element_by_id('login-signin')
-    login_btn.click()
-    pw_elem = WebDriverWait(browser, 10).until(
-        expected_conditions.presence_of_element_located((By.ID, 'login-passwd'))
-    )
-    pw_elem.send_keys(user_pw)
-    submit_btn = browser.find_element_by_id('login-signin')
-    submit_btn.click()
-    return browser
-
-
 def write_player_record_to_csv(csv_extract, player_details, player_status, player_projections):
-    csv_contents = '\n' + ' '.join(player_details[:-3]) \
-                   + '{0}' + player_details[-3] + '{0}' + player_details[-1] + '{0}' + player_status + '{0}'
+    csv_contents = '\n' + player_details[0] + '{0}' + player_details[1] + '{0}' + player_details[2] + '{0}' + player_status + '{0}'
     for player_projection in player_projections:
         csv_contents = csv_contents + player_projection + '{0}'
-    with open(csv_extract, 'a') as output_file:
+    with open(csv_extract, 'a', encoding='utf-8') as output_file:
         output_file.write(csv_contents.format(',')[:-1])
 
 
@@ -64,28 +43,28 @@ def main():
 
     # Create output file headers
     csv_extract = datetime.now().strftime('%Y_%m_%d_') + 'yahoo_player_season_projections.csv'
-    with open(csv_extract, 'a') as output_file:
+    with open(csv_extract, 'a', encoding='utf-8') as output_file:
         output_file.write(
-            'PLAYER_NAME,TEAM,POSITION,PLAYER_STATUS,GP*,BYE,FANTASY_POINTS,PRESEASON_RANKING,ACTUAL_RANKING,%_ROSTERED,PASSING_YDS,'
+            'PLAYER_NAME,TEAM,POSITION,PLAYER_STATUS,GP*,BYE,FANTASY_POINTS,PRESEASON_RANKING,ACTUAL_RANKING,PASSING_YDS,'
             'PASSING_TD,PASSING_INT,RUSHING_ATT,RUSHING_YDS,RUSHING_TD,RECEPTIONS,RECEIVING_YDS,RECEIVING_TD,TARGETS,RET_TD,'
             '2PT_CONVERSIONS,FUMBLES_LOST')
 
     # Remotely control safari web browser
     browser = webdriver.Safari()
-    browser = yahoo_account_login(args.yahoo_email, args.yahoo_pw, browser)
+    browser = helper.yahoo_account_login(args.yahoo_email, args.yahoo_pw, browser)
 
     # Cycle through player data and extract season-long projections
     print('Extracting Yahoo! fantasy football player season projections...')
     pagination = 0  # Initialize at player 0
     while pagination <= 275:  # Last page begins at player 275, extract top 300 player projections by points
-        browser.get('https://football.fantasysports.yahoo.com/f1/{0}/players?&sort=PTS&sdir=1&status=A&pos=O&stat1=S_PS_{1}&count={2}'
-                    .format(args.yahoo_league_id, args.yahoo_league_year, str(pagination)))
-
+        time.sleep(5)  # Delay by 5 seconds
+        browser.get(f'https://football.fantasysports.yahoo.com/f1/{args.yahoo_league_id}/players?&sort=PTS&sdir=1&status=A'
+                    f'&pos=O&stat1=S_PS_{args.yahoo_league_year}&count={str(pagination)}')
         # Extract data from first web page table
-        tables = browser.find_elements_by_class_name('Table')
+        tables = browser.find_elements(By.CLASS_NAME, 'Table')
         table_data = tables[0].get_attribute('innerText')
         table_rows = table_data.splitlines()
-        del table_rows[:38]  # Remove header rows
+        del table_rows[:35]  # Remove header rows
 
         # Initialize variables
         i = 0
@@ -95,31 +74,36 @@ def main():
 
         # Parse records and write to output file
         for table_row in table_rows:
-            if i == 2:  # Capture player name, team, and position from record
-                player_details = table_row.split(' ')
-                print(' '.join(player_details[:-3]))
+            if i == 0:  # Capture player name, team, and position from record
+                player_details.append(table_row)
                 i += 1
+                continue
+            if i == 1:  # Capture team and position from record
+                team_pos = table_row.split(' ')
+                player_details.append(team_pos[0])  # NFL team
+                player_details.append(team_pos[2])  # Position
+                print(f'{player_details[0]} - {player_details[2]} - {player_details[1]}')
+                i += 1
+                continue
             # Handle other player statuses
-            elif table_row.lower() in ('ir', 'nfi-r', 'nfi-a', 'o', 'pup', 'pup-p', 'd', 'na', 'p', 'q', 'susp'):
+            if table_row.lower() in ('ir', 'nfi-r', 'nfi-a', 'o', 'pup', 'pup-p', 'd', 'na', 'p', 'q', 'susp'):
                 player_status = table_row
                 continue
-            # Skip video forecasts that only exist for certain players
-            elif 'forecast' in table_row.lower():
-                continue
-            elif i in (0, 1, 3, 4, 5, 25):  # Skip specific unused record using iterator
+            if i in (2, 3, 4, 5):  # Skip specific unused record using iterator
                 i += 1
-                pass
-            elif 'note' in table_row.lower():  # Write current player projections and advance to next player
+                continue
+            if table_row.lower() == '':  # Write current player projections and advance to next player
                 write_player_record_to_csv(csv_extract, player_details, player_status, player_projections)
                 # Reset variables
-                i = 2
-                player_projections = []
+                i = 0
+                player_details = []
                 player_status = 'A'
+                player_projections = []
                 continue
-            else:  # Store player projection figures in list
-                player_projections.append(table_row)
-                i += 1
-                continue
+            # Store player projection figures in list
+            player_projections.append(table_row)
+            i += 1
+            continue
 
         write_player_record_to_csv(csv_extract, player_details, player_status, player_projections)  # Write final page record
         pagination += 25  # Paginate to the next 25 players
@@ -131,5 +115,5 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-    except Exception as err:
+    except RuntimeError as err:
         raise err

@@ -9,8 +9,8 @@ import time
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.ui import WebDriverWait
+
+import helper
 
 
 def init_config():
@@ -29,55 +29,36 @@ def get_arg_list():
     return parser.parse_args()
 
 
-def yahoo_account_login(user_email, user_pw, browser):
-    """
-    Login to yahoo account to access fantasy football league data.
-    """
-
-    browser.get('https://login.yahoo.com')
-    email_elem = browser.find_element_by_id('login-username')
-    email_elem.send_keys(user_email)
-    login_btn = browser.find_element_by_id('login-signin')
-    login_btn.click()
-    pw_elem = WebDriverWait(browser, 10).until(
-        expected_conditions.presence_of_element_located((By.ID, 'login-passwd'))
-    )
-    pw_elem.send_keys(user_pw)
-    submit_btn = browser.find_element_by_id('login-signin')
-    submit_btn.click()
-    return browser
-
-
 def main():
     start, args = init_config()
     print('Program started\n**************START**************\n')
 
     # Remotely control Safari web browser
     browser = webdriver.Safari()
-    browser = yahoo_account_login(args.yahoo_email, args.yahoo_pw, browser)
+    browser = helper.yahoo_account_login(args.yahoo_email, args.yahoo_pw, browser)
 
     # Obtain historical fantasy football league details using yahoo player profile
+    time.sleep(5)  # Delay by 5 seconds
     browser.get('https://profiles.sports.yahoo.com/?sport=football')
 
     # Search web page elements to find and click button for user fantasy football league history
-    elements = browser.find_elements_by_xpath('//*[contains(text(), \'History\')]')
+    elements = browser.find_elements(By.XPATH, '//*[contains(text(), \'History\')]')
     for element in elements:
         if element.get_attribute('textContent') == 'History':
             element.click()
 
     # For supplied league year, extract auction draft results
-    elements = browser.find_elements_by_xpath(
-        f'//a[contains(@href, \'https://football.fantasysports.yahoo.com/{args.yahoo_league_year}/\')]')
+    elements = browser.find_elements(By.XPATH, f'//a[contains(@href, \'https://football.fantasysports.yahoo.com/{args.yahoo_league_year}/\')]')
 
     for element in elements:
         # Locate auction draft results and sort by descending player acquisition cost
         if args.yahoo_league_name in element.get_attribute('outerText'):
             browser.get(element.get_attribute('href') + '/draftresults?drafttab=picks&sort=cost&order_by=desc')
-            tables = browser.find_elements_by_class_name('Table')
+            tables = browser.find_elements(By.CLASS_NAME, 'Table')
 
             for table in tables:
                 table_data = table.get_attribute('innerText')
-                # Use page table header that has draft pick data and transform within dataframe
+                # Use page table header that has draft pick data and transform within Pandas dataframe
                 if table_data[0:4] == 'Pick':
                     df = pd.read_csv(StringIO(table_data), delimiter='\t', lineterminator='\n')
                     df['Pick'] = df['Pick'].astype(int)
