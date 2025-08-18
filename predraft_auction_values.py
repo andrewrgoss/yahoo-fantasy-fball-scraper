@@ -58,14 +58,14 @@ def main():
             else:
 
                 fantasy_data = row.text.splitlines()
-                player_name = row.contents[2].contents[1].contents[1].contents[1].contents[0].text
-                team_pos = row.contents[2].contents[1].contents[1].contents[1].contents[1].text
+                player_name = row.contents[2].contents[1].contents[1].contents[1].attrs['alt']
+                team_pos = fantasy_data[10]
                 team_pos = team_pos.split(' ')
 
                 print(player_name)
                 with open(csv_extract, 'a', encoding='utf-8') as output_file:
                     output_file.write(f'\n{player_name},{team_pos[0]},{team_pos[2]},'
-                                      f'{fantasy_data[10]},{fantasy_data[11]},{fantasy_data[12]},{fantasy_data[13]}')
+                                      f'{fantasy_data[18]},{fantasy_data[19]},{fantasy_data[20]},{fantasy_data[21]}')
         pagination += 50  # Paginate to the next 50 players
 
     end = time.time()
