@@ -12,8 +12,6 @@ import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 
 import helper
@@ -151,9 +149,7 @@ def main():
                             f'filter=ALL&sort=TAC&count={str(pagination)}')
                 try:
                     WebDriverWait(browser, 30).until(
-                        expected_conditions.presence_of_element_located(
-                            (By.ID, 'ysf-preauctioncosts-dt')
-                        )
+                        lambda driver: 'ysf-preauctioncosts-dt' in driver.page_source
                     )
                 except TimeoutException as exc:
                     raise RuntimeError(
