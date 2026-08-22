@@ -52,4 +52,14 @@ def yahoo_account_login(user_email, user_pw, browser):
         'input[type="submit"]',
     ))
     submit_btn.click()
+    # Yahoo redirects asynchronously after credential submission. Do not
+    # navigate to Fantasy Football until the login page has handed off.
+    try:
+        WebDriverWait(browser, 30).until(
+            lambda driver: 'login.yahoo.com' not in driver.current_url
+        )
+    except TimeoutException:
+        # Leave any account challenge visible for the caller; the auction page
+        # will produce a clear error if authentication did not complete.
+        pass
     return browser
