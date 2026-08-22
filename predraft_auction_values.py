@@ -48,7 +48,13 @@ def get_arg_list():
     parser.add_argument(
         '--manual-login',
         action='store_true',
-        help='Open Yahoo in Safari and let the user complete login manually.',
+        help='Open Yahoo in the selected browser and let the user complete login manually.',
+    )
+    parser.add_argument(
+        '--browser',
+        choices=('safari', 'chrome'),
+        default=os.getenv('YAHOO_BROWSER', 'safari').lower(),
+        help='Browser controlled by Selenium (default: safari).',
     )
     parser.add_argument(
         '--output', '--output-file',
@@ -103,6 +109,14 @@ def resolve_output_path(args):
     return output_path
 
 
+def create_browser(browser_name):
+    """Create the requested Selenium browser driver."""
+
+    if browser_name == 'chrome':
+        return webdriver.Chrome()
+    return webdriver.Safari()
+
+
 def main():
     start, args = init_config()
     args = resolve_arguments(args)
@@ -115,8 +129,8 @@ def main():
             ['PLAYER_NAME', 'TEAM', 'POSITION', 'LEAGUE_VALUE', 'PROJ_VALUE', 'AVG_COST', 'PREVIOUS_OWNER']
         )
 
-    # Remotely control Safari web browser
-    browser = webdriver.Safari()
+    # Remotely control the selected browser.
+    browser = create_browser(args.browser)
     try:
         if args.manual_login:
             browser = manual_yahoo_login(browser)

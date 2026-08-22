@@ -45,6 +45,7 @@ cd /<<your_local_download_location>>/yahoo-fantasy-fball-scraper
 python3 predraft_auction_values.py \
   --yahoo-email your_yahoo_email \
   --yahoo-league-id your_yahoo_fantasy_football_league_id \
+  --browser chrome \
   --output-dir /<<private_output_directory>>
 ```
 
@@ -54,9 +55,14 @@ email and password entirely and use manual login:
 ```bash
 python3 predraft_auction_values.py \
   --yahoo-league-id your_yahoo_fantasy_football_league_id \
+  --browser chrome \
   --manual-login \
   --output /<<private_output_directory>>/yahoo_predraft_auction_values.csv
 ```
+
+Safari remains the default for compatibility with the original scraper; use
+`--browser chrome` when Yahoo’s current login page is not compatible with the
+Safari automation session.
 
 The historical underscore-style options (`--yahoo_email`, `--yahoo_pw`, and
 `--yahoo_league_id`) remain accepted for existing IDE run configurations. Avoid
