@@ -11,6 +11,10 @@ import time
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.ui import WebDriverWait
 
 import helper
 
@@ -143,16 +147,26 @@ def main():
         with csv_extract.open('a', encoding='utf-8', newline='') as output_file:
             writer = csv.writer(output_file)
             while pagination <= 250:  # Last page begins at player 250, extract top 300 player auction values
-                time.sleep(5)  # Delay by 5 seconds
                 browser.get(f'https://football.fantasysports.yahoo.com/f1/{args.yahoo_league_id}/3/prerank_auction_costs?'
                             f'filter=ALL&sort=TAC&count={str(pagination)}')
+                try:
+                    WebDriverWait(browser, 30).until(
+                        expected_conditions.presence_of_element_located(
+                            (By.ID, 'ysf-preauctioncosts-dt')
+                        )
+                    )
+                except TimeoutException as exc:
+                    raise RuntimeError(
+                        'Yahoo auction-value table was not found. Confirm that Safari/Chrome is logged in '
+                        'and that the league is available for the requested season.'
+                    ) from exc
 
                 # Selenium hands off the source of the specific job page to Beautiful Soup for parsing.
                 soup = BeautifulSoup(browser.page_source, 'html.parser')
                 table = soup.find('table', id='ysf-preauctioncosts-dt')
                 if table is None:
                     raise RuntimeError(
-                        'Yahoo auction-value table was not found. Confirm that Safari is logged in '
+                        'Yahoo auction-value table was not found. Confirm that Safari/Chrome is logged in '
                         'and that the league is available for the requested season.'
                     )
 
