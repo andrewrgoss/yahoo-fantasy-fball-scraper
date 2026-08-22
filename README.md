@@ -36,7 +36,32 @@ Download this repository and run the following commands:
 `/<<your_local_download_location>>/yahoo-fantasy-fball-scraper/historical_draft_results.py --yahoo_email <<your_yahoo_email>> --yahoo_pw <<your_yahoo_password>> --yahoo_league_name <<your_yahoo_fantasy_football_league_name>> --yahoo_league_year <<historical_year_to_lookup_your_league_draft_results>>`
 
 #### Predraft Auction Values
-`/<<your_local_download_location>>/yahoo-fantasy-fball-scraper/predraft_auction_values.py --yahoo_email <<your_yahoo_email>> --yahoo_pw <<your_yahoo_password>> --yahoo_league_id <<your_yahoo_fantasy_football_league_id>>`
+Run this from a terminal. The email may be supplied as an option; when the
+password option is omitted, the script prompts without echoing the password or
+putting it in shell history:
+
+```bash
+cd /<<your_local_download_location>>/yahoo-fantasy-fball-scraper
+python3 predraft_auction_values.py \
+  --yahoo-email your_yahoo_email \
+  --yahoo-league-id your_yahoo_fantasy_football_league_id \
+  --output-dir /<<private_output_directory>>
+```
+
+If you prefer to complete Yahoo authentication directly in Safari, omit the
+email and password entirely and use manual login:
+
+```bash
+python3 predraft_auction_values.py \
+  --yahoo-league-id your_yahoo_fantasy_football_league_id \
+  --manual-login \
+  --output /<<private_output_directory>>/yahoo_predraft_auction_values.csv
+```
+
+The historical underscore-style options (`--yahoo_email`, `--yahoo_pw`, and
+`--yahoo_league_id`) remain accepted for existing IDE run configurations. Avoid
+passing a password as a command-line option because it can be exposed in shell
+history or process listings.
 
 #### Player Current Season Projections
 `/<<your_local_download_location>>/yahoo-fantasy-fball-scraper/player_season_projections.py --yahoo_email <<your_yahoo_email>> --yahoo_pw <<your_yahoo_password>> --yahoo_league_id <<your_yahoo_fantasy_football_league_id>> --yahoo_league_year <<current_year_to_lookup_season_long_projections>>` 
