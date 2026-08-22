@@ -70,7 +70,22 @@ passing a password as a command-line option because it can be exposed in shell
 history or process listings.
 
 #### Player Current Season Projections
-`/<<your_local_download_location>>/yahoo-fantasy-fball-scraper/player_season_projections.py --yahoo_email <<your_yahoo_email>> --yahoo_pw <<your_yahoo_password>> --yahoo_league_id <<your_yahoo_fantasy_football_league_id>> --yahoo_league_year <<current_year_to_lookup_season_long_projections>>` 
+Run the projection scraper from a terminal. Omit the password option so the
+CLI prompts without echoing it:
+
+```bash
+cd /<<your_local_download_location>>/yahoo-fantasy-fball-scraper
+python3 player_season_projections.py \
+  --yahoo-email your_yahoo_email \
+  --yahoo-league-id your_yahoo_fantasy_football_league_id \
+  --yahoo-league-year 2026 \
+  --browser chrome \
+  --output-dir /<<private_output_directory>>
+```
+
+The historical underscore-style options remain accepted for existing PyCharm
+run configurations. Use `--output` when an exact private filename is needed;
+do not store the generated projections CSV in a public repository.
 
 #### Current League Auction Draft Results
 `/<<your_local_download_location>>/yahoo-fantasy-fball-scraper/current_draft_results.py --yahoo_email <<your_yahoo_email>> --yahoo_pw <<your_yahoo_password>> --yahoo_league_id <<your_yahoo_fantasy_football_league_id>>`
